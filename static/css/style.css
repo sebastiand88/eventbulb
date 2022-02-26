@@ -74,11 +74,6 @@ h3 {
 
 .navbar nav > ul > li {
   margin-right: 1rem;
-  list-style: none;
-}
-
-.navbar nav > ul > li:hover {
-  color: var(--red-accent);
 }
 
 .navbar nav > ul > li > a,
@@ -319,8 +314,4 @@ textarea {
 .reviews-scroller {
   max-height: 500px;
   overflow-y: scroll;
-}
-
-.django-card {
-  display: block;
 }
