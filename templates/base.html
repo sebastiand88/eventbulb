@@ -22,15 +22,31 @@
             <li>
               <a href="{% url 'information_home' %}">Home</a>
             </li>
+            {% if user.is_authenticated %}
             <li>
               <a href="#">Dashboard</a>
             </li>
+            {% endif %}
             <li>
               <a href="#">Events</a>
             </li>
           </ul>
         </nav>
       </section>
+      <nav class="auth-nav">
+        {% if user.is_authenticated %}
+        <span
+          >Logged in as:
+          <span class="logged-in-username">{{ user.username }}</span></span
+        >
+        <span> | </span>
+        <a href="{% url 'accounts_logout' %}">Log out</a>
+        {% else %}
+        <a href="{% url 'accounts_login' %}">Log In</a>
+        <span> | </span>
+        <a href="{% url 'accounts_register' %}">Register</a>
+        {% endif %}
+      </nav>
     </header>
     {% block content %} {% endblock content %}
   </body>
