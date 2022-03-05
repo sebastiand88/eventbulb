@@ -6,17 +6,16 @@
   <div class="card-background two-thirds-width">
     <section class="card landing-text-container">
       <div class="">
-        <h2 class="site-heading">Django Meetup</h2>
-        <h4>Feb 24 2022 8pm</h4>
-        <h3></h3>
+        <h2 class="site-heading">Event: {{event.title}}</h2>
+        <h4>Date: {{event.datetime}}</h4>
+        <h3 class="landing-text">Price: £{{event.cost}}</h3>
       </div>
     </section>
     <section class="card landing-text-container">
       <img src="{% static 'images/image_placeholder.jpg' %}" alt="">
     </section>
     <section class="card landing-text-container django-card">
-      <p class="landing-text">Price: £0.00</p>
-      <p>A meetup for Django developers and people who are interested in Django development. People of all experience levels are welcome, from beginners to pros!</p>
+      <p><b>Description:</b> <br/><br/> {{event.description}}</p>
     </section>
     </div>
   </div>

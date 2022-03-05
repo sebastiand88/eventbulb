@@ -18,7 +18,9 @@
           <p>{{event.description}}</p>
         </div>
         <div class="event-controls">
-          <a href="{% url 'events_details' %}" class="button gray">Details</a>
+          <a href="{% url 'events_details' event.id %}" class="button gray"
+            >Details</a
+          >
         </div>
       </li>
       {% endfor %}

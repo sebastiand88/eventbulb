@@ -5,7 +5,7 @@
     "fields": {
       "title": "A concert",
       "datetime": "2021-01-01T14:00:00.000Z",
-      "description": "EICC",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec augue libero, ullamcorper at purus at, rhoncus venenatis nibh. Etiam porttitor hendrerit leo condimentum tincidunt",
       "cost": 15.0
     }
   },
@@ -15,7 +15,7 @@
     "fields": {
       "title": "TED Talk - Data ",
       "datetime": "2022-10-10T16:00:00.000Z",
-      "description": "CodeClan Offices",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec augue libero, ullamcorper at purus at, rhoncus venenatis nibh. Etiam porttitor hendrerit leo condimentum tincidunt",
       "cost": 10.0
     }
   },
@@ -25,7 +25,7 @@
     "fields": {
       "title": "Another fun concert",
       "datetime": "2022-04-08T12:00:00.000Z",
-      "description": "SECC",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec augue libero, ullamcorper at purus at, rhoncus venenatis nibh. Etiam porttitor hendrerit leo condimentum tincidunt",
       "cost": 20.0
     }
   }
