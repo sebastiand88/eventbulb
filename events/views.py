@@ -3,7 +3,20 @@ from .models import Event
 
 # Create your views here.
 def events(request):
-  events = Event.objects.all()
+
+  filter_map = {
+    "title": "title__icontains",
+    "is_free": "cost__exact"
+  }
+
+  filters = {}
+
+  for key, value in request.GET.items():
+        filter_key = filter_map[key]
+        if value:
+            filters[filter_key] = value
+
+  events = Event.objects.filter(**filters)
   return render(request, "events/events.html", {"events": events})
 
 

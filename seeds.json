@@ -28,5 +28,15 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec augue libero, ullamcorper at purus at, rhoncus venenatis nibh. Etiam porttitor hendrerit leo condimentum tincidunt",
       "cost": 20.0
     }
+  },
+  {
+    "model": "events.Event",
+    "pk": 4,
+    "fields": {
+      "title": "Free concert",
+      "datetime": "2022-02-01T12:00:00.000Z",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec augue libero, ullamcorper at purus at, rhoncus venenatis nibh. Etiam porttitor hendrerit leo condimentum tincidunt",
+      "cost": 0.0
+    }
   }
 ]

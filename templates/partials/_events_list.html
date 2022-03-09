@@ -1,0 +1,23 @@
+{% load static %}
+
+<ul class="events-list">
+  {% for event in events %}
+  <li class="card event">
+    <img
+      class="event-image"
+      src="{% static 'images/image_placeholder.jpg' %}"
+      alt=""
+    />
+    <div class="event-info">
+      <h2>{{event.title}}</h2>
+      <h3>{{event.datetime}} | £{{event.cost}}</h3>
+      <p>{{event.description}}</p>
+    </div>
+    <div class="event-controls">
+      <a href="{% url 'events_details' event.id %}" class="button gray"
+        >Details</a
+      >
+    </div>
+  </li>
+  {% endfor %}
+</ul>
