@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section id="event-list" class="card-background">
+  <section class="card">
+    <h2>Upcoming Events</h2>
+    {% include 'partials/_events_list.html' with events=future %}
+  </section>
+
+  <section class="card">
+    <h2>Past Events</h2>
+    {% include 'partials/_events_list.html' with events=past %}
+  </section>
+</section>
+{% endblock content %}
