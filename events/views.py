@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
-from .models import Event
+from .models import Event, Review
 from accounts.models import UserProfile
 
 # Create your views here.
@@ -49,6 +49,7 @@ def details(request, id):
   eventFromDB = get_object_or_404(Event, id = id)
   return render(request, "events/details.html", {"event": eventFromDB})
 
+
 def dashboard(request):
   today = datetime.today()
 
@@ -59,3 +60,16 @@ def dashboard(request):
   past_attend = user_profile.attending.filter(datetime__lte=today).filter(**filters).order_by("datetime")
   return render(request, "events/dashboard.html", {"future": future_attend, "past": past_attend})
   
+def new_review(request, id):
+  event = get_object_or_404(Event, id=id)
+  if request.method == "POST":
+    rating = request.POST["rating"]
+    text = request.POST["text"]
+    new_review = Review(
+      rating = rating,
+      text = text,
+      event = event,
+      profile = get_user_profile(request)
+    )
+    new_review.save()
+    return redirect("/events")

@@ -9,3 +9,8 @@ class Event(models.Model):
   def __str__(self):
     return self.title
 
+class Review(models.Model):
+  profile = models.ForeignKey("accounts.UserProfile", on_delete=models.CASCADE, related_name="event_reviews")
+  event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name="event_reviews")
+  rating = models.IntegerField()
+  text = models.TextField()
