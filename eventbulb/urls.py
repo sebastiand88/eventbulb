@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+handler404 = "errors.views.error_404"
+handler403 = "errors.views.error_403"
+handler500 = "errors.views.error_500"
+handler400 = "errors.views.error_400"
+
 urlpatterns = [
     path("", include("information.urls")),
     path("events/", include("events.urls")),

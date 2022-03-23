@@ -12,7 +12,11 @@
       </div>
     </section>
     <section class="card landing-text-container">
-      <img src="{% static 'images/image_placeholder.jpg' %}" alt="">
+      {% if event.image|length > 0 %}
+    <img class="event-image" src="{{ event.image.url }}" alt="">
+    {% else %}
+      <img class="event-image" src="{% static 'images/image_placeholder.jpg' %}" alt="">
+    {% endif %}
     </section>
     <section class="card landing-text-container django-card">
       <p><b>Description:</b> <br/><br/> {{event.description}}</p>
